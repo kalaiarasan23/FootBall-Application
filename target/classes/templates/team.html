@@ -25,7 +25,7 @@
 	    <form th:action="@{/tournaments/{id}/team(id=${team.tournament.id})}"
 	          th:object="${team}" method="post" class="mb-4">
 	        <div class="input-group">
-	            <input type="text" th:field="*{name}" class="form-control" placeholder="Enter team name" required>
+	            <input type="text" th:field="*{name}" jth:attr="value=${#strings.trim(name)}" class="form-control" placeholder="Enter team name" required>
 	            <button type="submit" class="btn btn-success">Add Team</button>
 	        </div>
 	    </form>
